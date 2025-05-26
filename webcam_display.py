@@ -1,4 +1,5 @@
 import cv2
+from ui_elements import draw_ui_elements  # Import the new function
 
 # Open a connection to the default camera (0 is usually the default camera index)
 cap = cv2.VideoCapture(0)
@@ -13,6 +14,8 @@ while True:
         print("Failed to grab frame")
         break
 
+    frame = draw_ui_elements(frame)  # Add UI overlays     
+    
     # Display the resulting frame in a window called "Webcam"
     cv2.imshow('Webcam', frame)
 
