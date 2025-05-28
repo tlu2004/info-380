@@ -1,1 +1,6 @@
+PyQt5
+requests
+pandas
+sodapy
+psutil
 opencv-python
